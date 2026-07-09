@@ -100,7 +100,7 @@ const Home = () => {
             for a valuable asset to any team in web development, you should
             check him out. {''}
             <Link
-              href="https://decaldas.github.io/mostly-entertainment/"
+              href="https://aite-cc.devcaldas.workers.dev/"
               target="_blank"
             >
               Outside of work, he enjoys recording and singing songs of rap

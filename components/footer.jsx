@@ -22,12 +22,12 @@ const Footer = () => {
         <Heading>
           <div style={{ display: 'inline-flex' }}>
             <a
-              href="https://github.com/deCaldas"
+              href="https://github.com/devCaldas-dev"
               target="_blank"
               rel="noreferrer"
             >
               <IoLogoGithub />
-              <Heading variant="caption">De Caldas</Heading>
+              <Heading variant="caption">Dev Caldas</Heading>
             </a>
           </div>
         </Heading>

@@ -15,7 +15,7 @@ const BrandingBox = styled.span`
 
 const Branding = () => {
   return (
-    <Link href="/" scroll={false}>
+    <Link href="https://dev-caldas.devcaldas-web.workers.dev/" scroll={false}>
       <BrandingBox>
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
@@ -23,7 +23,7 @@ const Branding = () => {
           fontWeight="bold"
           ml={3}
         >
-          De Caldas
+          Dev Caldas
         </Text>
       </BrandingBox>
       <Paragraph>[Web Development]</Paragraph>

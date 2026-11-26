@@ -4,7 +4,7 @@
   "description": "Diego's Website",
   "scripts": {
     "dev": "next dev --turbopack",
-    "lint": "next lint",
+    "lint": "eslint .",
     "prettier": "prettier --write .",
     "build": "next build"
   },
@@ -23,16 +23,16 @@
     "@chakra-ui/icons": "2.0.15",
     "@chakra-ui/react": "2.4.6",
     "framer-motion": "^12.19.2",
-    "next": "^15.1.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "react-icons": "4.7.1",
     "sharp": "0.33.3"
   },
   "devDependencies": {
     "autoprefixer": "10.4.16",
-    "eslint": "8.31.0",
-    "eslint-config-next": "13.1.1",
+    "eslint": "10.15.0",
+    "eslint-config-next": "16.4.6",
     "postcss": "8.4.31",
     "prettier": "2.8.2"
   }

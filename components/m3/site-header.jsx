@@ -1,11 +1,37 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useSyncExternalStore } from 'react'
 import Link from 'next/link'
-import Button from '@cloudstrytech/ui-components/button'
+import IconButton from '@cloudstrytech/ui-components/iconbutton'
 import Branding from './branding'
 
+const themeChangeEvent = 'portfolio-theme-change'
+
+function getThemeSnapshot() {
+  return document.documentElement.dataset.theme || 'light'
+}
+
+function subscribeToTheme(onChange) {
+  window.addEventListener(themeChangeEvent, onChange)
+  return () => window.removeEventListener(themeChangeEvent, onChange)
+}
+
+function getServerThemeSnapshot() {
+  return 'light'
+}
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme
+  window.dispatchEvent(new Event(themeChangeEvent))
+}
+
 export default function SiteHeader() {
+  const theme = useSyncExternalStore(
+    subscribeToTheme,
+    getThemeSnapshot,
+    getServerThemeSnapshot
+  )
+
   useEffect(() => {
     const storedTheme = window.localStorage.getItem('portfolio-color-scheme')
     const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)')
@@ -13,7 +39,8 @@ export default function SiteHeader() {
       ? 'dark'
       : 'light'
 
-    document.documentElement.dataset.theme = storedTheme || preferredTheme
+    const nextTheme = storedTheme || preferredTheme
+    applyTheme(nextTheme)
   }, [])
 
   const toggleTheme = () => {
@@ -23,7 +50,7 @@ export default function SiteHeader() {
         ? 'dark'
         : 'light')
     const nextTheme = currentTheme === 'dark' ? 'light' : 'dark'
-    document.documentElement.dataset.theme = nextTheme
+    applyTheme(nextTheme)
     window.localStorage.setItem('portfolio-color-scheme', nextTheme)
   }
 
@@ -42,14 +69,17 @@ export default function SiteHeader() {
           >
             Blog <span aria-hidden="true">↗</span>
           </a>
-          <Button
-            aria-label="Toggle light and dark color theme"
+          <IconButton
+            aria-label={
+              theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
+            }
+            className="theme-toggle-button"
             onClick={toggleTheme}
-            type="button"
-            variant="text"
           >
-            Toggle theme
-          </Button>
+            <span aria-hidden="true" className="material-symbols-outlined">
+              {theme === 'dark' ? 'dark_mode' : 'light_mode'}
+            </span>
+          </IconButton>
         </nav>
       </div>
     </header>

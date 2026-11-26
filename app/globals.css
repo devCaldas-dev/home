@@ -251,6 +251,20 @@ md-text-button:focus-visible {
   gap: clamp(0.75rem, 2vw, 1.5rem);
 }
 
+.theme-toggle-button {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  --cst-icon-btn-icon-size: 24px;
+  --cst-icon-btn-icon-color: var(--md-sys-color-on-surface);
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+  line-height: 1;
+}
+
 .site-nav a {
   color: var(--md-sys-color-on-surface);
   font-weight: 600;

@@ -1,5 +1,5 @@
-:HL["/home/_next/static/chunks/1gj2txqr1bwrz.css","style"]
+:HL["/home/_next/static/chunks/1du_1chsxnuy_.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"VhQtHQ2imTzN8N7zkfiye","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"G3itK95qr-doGMMBb2AEN","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

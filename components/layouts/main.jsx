@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import NavBar from '../navbar'
-import { Container } from '@chakra-ui/react'
-import { useDisclosure } from '@chakra-ui/react'
+import NavBar from '../m3/navbar'
 import Footer from '../footer'
 
 /**

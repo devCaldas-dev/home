@@ -1,7 +1,7 @@
 {
   "name": "homepage",
   "version": "2.7.7",
-  "description": "Diego's Website",
+  "description": "Armando Toro Cárdenas's Website",
   "scripts": {
     "dev": "next dev --turbopack",
     "lint": "eslint .",
@@ -16,8 +16,7 @@
     "Git & GitHub",
     "Web Developer"
   ],
-  "author": "Takuya Matsuyama",
-  "clone editor": "Armando Toro Cárdenas",
+  "author": "Armando Toro Cárdenas",
   "license": "MIT",
   "dependencies": {
     "@chakra-ui/icons": "2.0.15",

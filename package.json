@@ -19,11 +19,8 @@
   "author": "Armando Toro Cárdenas",
   "license": "MIT",
   "dependencies": {
-    "@chakra-ui/icons": "2.0.15",
-    "@chakra-ui/react": "2.4.6",
     "@cloudstrytech/ui-components": "1.0.28",
     "@material/web": "2.5.0",
-    "framer-motion": "^12.19.2",
     "next": "^16.4.6",
     "react": "19.3.1",
     "react-dom": "19.3.1",
